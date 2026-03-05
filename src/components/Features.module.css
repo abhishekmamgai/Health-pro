@@ -370,3 +370,28 @@
     background: rgba(255, 255, 255, 0.1) !important;
     border-color: rgba(255, 255, 255, 0.4) !important;
 }
+/* ============================================
+   MOBILE RESPONSIVE FIXES
+   ============================================ */
+
+@media (max-width: 767px) {
+    .section {
+        padding: 72px 20px;
+    }
+
+    .header {
+        margin-bottom: 48px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .card {
+        padding: 28px 24px;
+    }
+}

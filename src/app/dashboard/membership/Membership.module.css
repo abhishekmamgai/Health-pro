@@ -422,3 +422,11 @@
 .spin {
     animation: spin 1s linear infinite;
 }
+/* ============================================
+   MOBILE RESPONSIVE FIXES
+   ============================================ */
+@media (max-width: 767px) {
+    .currentPlan { padding: 28px 20px; }
+    .title { font-size: 24px; }
+    .subtitle { font-size: 14px; }
+}

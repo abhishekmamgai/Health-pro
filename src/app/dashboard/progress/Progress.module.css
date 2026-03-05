@@ -174,3 +174,10 @@
     background: var(--gradient-brand);
     border-radius: 4px;
 }
+/* ============================================
+   MOBILE RESPONSIVE FIXES
+   ============================================ */
+@media (max-width: 767px) {
+    .title { font-size: 24px; }
+    .statCard { padding: 16px; gap: 14px; }
+}

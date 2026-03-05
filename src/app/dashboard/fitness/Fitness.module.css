@@ -369,3 +369,11 @@
     font-size: 18px;
     font-weight: 800;
 }
+/* ============================================
+   MOBILE RESPONSIVE FIXES
+   ============================================ */
+@media (max-width: 767px) {
+    .titleBox h1 { font-size: 24px; }
+    .subtitle { font-size: 14px; }
+    .qrBtn { height: 48px !important; }
+}

@@ -307,3 +307,39 @@
     transform: scaleX(0);
     transition: transform 4.5s linear;
 }
+/* ============================================
+   MOBILE RESPONSIVE FIXES
+   ============================================ */
+
+@media (max-width: 767px) {
+    .navbar {
+        height: 68px;
+    }
+
+    .container {
+        padding: 0 18px;
+    }
+
+    .mobileMenu {
+        padding: 90px 28px 40px;
+    }
+
+    .mobileLink {
+        font-size: 22px;
+        padding: 10px 0;
+    }
+
+    .popup {
+        width: calc(100vw - 32px);
+        padding: 32px 24px 0;
+    }
+
+    .popupActions {
+        flex-direction: column;
+    }
+
+    .popupPrimary, .popupSecondary {
+        flex: unset;
+        width: 100%;
+    }
+}

@@ -213,3 +213,10 @@
     min-width: 160px;
     gap: 8px;
 }
+/* ============================================
+   MOBILE RESPONSIVE FIXES
+   ============================================ */
+@media (max-width: 767px) {
+    .header { padding: 20px 16px; }
+    .content { padding: 20px 16px; }
+}

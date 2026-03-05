@@ -482,3 +482,46 @@
 .renewButton:hover {
     opacity: 0.75;
 }
+/* ============================================
+   MOBILE RESPONSIVE FIXES
+   ============================================ */
+
+@media (max-width: 767px) {
+    .welcome h1 {
+        font-size: 24px;
+    }
+
+    .streakHero {
+        padding: 24px 20px;
+        min-width: unset;
+    }
+
+    .streakValue {
+        font-size: 40px;
+    }
+
+    .quickActions {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .actionCard {
+        padding: 16px;
+    }
+
+    .aiHero {
+        padding: 20px 20px;
+    }
+
+    .aiTitle {
+        font-size: 18px;
+    }
+
+    .exerciseList {
+        padding: 8px 16px 4px;
+    }
+
+    .startWorkoutBtn {
+        margin: 16px 16px 20px;
+    }
+}

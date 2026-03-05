@@ -383,3 +383,38 @@
     gap: 8px;
     margin-top: auto;
 }
+/* ============================================
+   MOBILE RESPONSIVE FIXES
+   ============================================ */
+
+@media (max-width: 767px) {
+    .section {
+        padding: 72px 20px;
+    }
+
+    .header {
+        margin-bottom: 48px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .card {
+        padding: 28px 24px;
+    }
+
+    .popularCard,
+    .popularCard.cardVisible,
+    .popularCard:hover {
+        transform: none !important;
+    }
+
+    .price {
+        font-size: 30px;
+    }
+}

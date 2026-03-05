@@ -350,3 +350,17 @@
     margin: 0;
     line-height: 1.5;
 }
+/* ============================================
+   MOBILE RESPONSIVE FIXES
+   ============================================ */
+@media (max-width: 767px) {
+    .titleBox h1 { font-size: 24px; }
+    .subtitle { font-size: 14px; }
+    .searchBar { margin-top: 16px; }
+    .chip { height: 34px; padding: 0 14px; font-size: 13px; }
+    .cardContent { padding: 16px; }
+    .exerciseName { font-size: 17px; }
+    .guideWrapper { margin-top: 16px; padding-top: 16px; }
+    .videoContainer { border-radius: 8px; }
+    .cardImage { height: 160px; }
+}

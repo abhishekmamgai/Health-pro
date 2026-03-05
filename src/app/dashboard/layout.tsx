@@ -19,7 +19,8 @@ export default function DashboardLayout({
                 <style dangerouslySetInnerHTML={{
                     __html: `
         @media (min-width: 1024px) { main { margin-left: 256px !important; } }
-        @media (max-width: 1023px) { main { padding-top: 80px !important; } }
+        @media (max-width: 1023px) { main { padding-top: 80px !important; padding-left: 16px !important; padding-right: 16px !important; } }
+        @media (max-width: 480px) { main { padding: 70px 12px 24px !important; } }
       `}} />
             </div>
         </LanguageProvider>

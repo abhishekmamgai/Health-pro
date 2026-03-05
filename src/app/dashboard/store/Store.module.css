@@ -1272,3 +1272,31 @@
     font-size: 13px;
     color: var(--color-text-mid);
 }
+/* ============================================
+   MOBILE RESPONSIVE FIXES
+   ============================================ */
+@media (max-width: 767px) {
+    .banner {
+        padding: 32px 24px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .bannerTitle { font-size: 26px; }
+    .bannerVisual { display: none; }
+    .bannerCtas { flex-direction: column; width: 100%; }
+    .bannerBtn { width: 100%; justify-content: center; }
+    .header { flex-direction: column; }
+    .headerRight { align-items: flex-start; }
+    .trustRow { justify-content: flex-start; }
+    .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .trustStrip { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .trustItem { padding: 14px; }
+    .modalInfo { padding: 20px; }
+    .modalName { font-size: 18px; }
+    .drawer { max-width: 100%; }
+    .title { font-size: 24px; }
+}
+
+@media (max-width: 400px) {
+    .grid { grid-template-columns: 1fr; }
+}
