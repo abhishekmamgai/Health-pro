@@ -916,3 +916,16 @@
         padding: 20px 18px;
     }
 }
+
+/* ============================================
+   HERO - EXTRA OVERFLOW FIX
+   ============================================ */
+@media (max-width: 767px) {
+    .hero { overflow-x: hidden !important; }
+    .visual { overflow: hidden; width: 100%; }
+    .chip1 { right: 0 !important; font-size: 11px !important; padding: 8px 10px !important; }
+    .chip2 { left: 0 !important; font-size: 11px !important; padding: 8px 10px !important; }
+    .streakCard { width: 240px !important; padding: 20px 16px !important; }
+    .streakNum { font-size: 68px !important; letter-spacing: -4px !important; }
+    .title { font-size: 36px !important; }
+}

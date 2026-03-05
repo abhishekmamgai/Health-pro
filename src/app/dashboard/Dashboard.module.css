@@ -525,3 +525,17 @@
         margin: 16px 16px 20px;
     }
 }
+
+/* ============================================
+   STREAK HERO OVERFLOW FIX
+   ============================================ */
+@media (max-width: 767px) {
+    .streakHero {
+        min-width: unset !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .streakValue { font-size: 36px !important; }
+    .welcome h1 { font-size: 20px !important; }
+    .welcome p { font-size: 13px !important; }
+}
