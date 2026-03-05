@@ -1,6 +1,4 @@
-'use client';
-
-export const dynamic = "force-dynamic";
+"use client";
 
 import React, { useState } from 'react';
 import { Search, Bookmark, Plus, ChevronUp, PlayCircle } from 'lucide-react';
