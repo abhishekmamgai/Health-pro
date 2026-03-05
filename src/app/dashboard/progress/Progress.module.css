@@ -1,0 +1,176 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.gradientText {
+    background: var(--gradient-brand);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: var(--color-text-mid);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .statsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.statCard {
+    background: var(--color-card);
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.statIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: var(--color-surface-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+}
+
+.statLabel {
+    font-size: 13px;
+    color: var(--color-text-light);
+    font-weight: 600;
+}
+
+.statValue {
+    font-size: 24px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.statDesc {
+    font-size: 12px;
+    color: var(--color-text-mid);
+}
+
+.chartsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 1024px) {
+    .chartsGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.chartCard {
+    background: var(--color-card);
+    padding: 32px;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.cardHeader h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.consistencyVisual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.scoreCircle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 8px solid var(--color-surface-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.scoreCircle::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 8px solid var(--color-primary);
+    border-right-color: transparent;
+    transform: rotate(45deg);
+}
+
+.scoreValue {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.scoreUnit {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.milestoneList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.milestoneItem {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.milestoneInfo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.progressBar {
+    height: 8px;
+    background: var(--color-surface-2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--gradient-brand);
+    border-radius: 4px;
+}

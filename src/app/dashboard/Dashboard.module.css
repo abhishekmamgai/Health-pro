@@ -1,0 +1,484 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 8px 0 40px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media (min-width: 1024px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.name {
+    background: var(--gradient-brand);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome p {
+    font-size: 15px;
+    color: var(--color-text-mid);
+}
+
+.streakHero {
+    background-color: var(--color-dark);
+    color: white;
+    padding: 28px 32px;
+    border-radius: var(--radius-xl);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 320px;
+    max-width: 420px;
+    box-shadow: 0 20px 40px rgba(10, 10, 46, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 1023px) {
+    .streakHero {
+        max-width: 100%;
+    }
+}
+
+.streakInfo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.streakFlame {
+    color: var(--color-cyan);
+    filter: drop-shadow(0 0 10px rgba(0, 255, 209, 0.3));
+    flex-shrink: 0;
+}
+
+.streakValue {
+    font-family: 'Outfit', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.streakUnit {
+    font-size: 12px;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    align-self: flex-end;
+    margin-bottom: 10px;
+}
+
+.checkInBtn {
+    height: 50px !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+}
+
+.checkedIn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-success);
+}
+
+.streakWarning {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-warning);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.milestoneProgress {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.milestoneLabel {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.progressBar {
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--gradient-brand);
+    border-radius: var(--radius-full);
+}
+
+.quickActions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+@media (min-width: 768px) {
+    .quickActions {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.actionCard {
+    background-color: var(--color-card);
+    padding: 20px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: all var(--anim-base);
+}
+
+.actionCard:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 24px rgba(0, 114, 255, 0.08);
+}
+
+.iconBg {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ✅ FIX: cyan pe dark icon */
+.blue    { background-color: var(--color-primary); }
+.cyan    { background-color: var(--color-cyan); color: #0a0a1a; }
+.purple  { background-color: var(--color-purple); }
+.success { background-color: var(--color-success); }
+
+.actionCard h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.actionCard p {
+    font-size: 12px;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+.dashboardGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+@media (min-width: 1024px) {
+    .dashboardGrid {
+        grid-template-columns: 1.8fr 1fr;
+        align-items: start;
+    }
+}
+
+.mainCol {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.recommender {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.sectionHeader h4 {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.durationSelector {
+    display: flex;
+    gap: 4px;
+    background-color: var(--color-border);
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.durationBtn {
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-text-mid);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.activeDuration {
+    background-color: var(--color-card);
+    color: var(--color-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.aiCardFull {
+    background-color: var(--color-card);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.aiHero {
+    padding: 28px 32px;
+    background: linear-gradient(135deg, var(--color-dark) 0%, #000 100%);
+    color: white;
+    position: relative;
+}
+
+.aiBadge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    background-color: var(--color-cyan);
+    color: var(--color-dark);
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* ✅ FIX: color white add kiya */
+.aiTitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    color: white;
+}
+
+.aiMeta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.exerciseList {
+    padding: 8px 28px 4px;
+    background-color: var(--color-card);
+}
+
+.exerciseRow {
+    padding: 14px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-surface);
+    gap: 12px;
+}
+
+.exerciseRow:last-child {
+    border-bottom: none;
+}
+
+.exerciseInfo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+    min-width: 0;
+}
+
+.exNumber {
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    background-color: var(--color-surface-2);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.exName {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.exMeta {
+    font-size: 11px;
+    color: var(--color-text-light);
+}
+
+.exReps {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-text-mid);
+    margin: 0 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.viewGuideBtn {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-surface-2);
+    color: var(--color-primary);
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+}
+
+.viewGuideBtn:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.startWorkoutBtn {
+    margin: 24px 28px 28px;
+    gap: 10px;
+    height: 56px !important;
+}
+
+.sideCol {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.statCard {
+    background-color: var(--color-card);
+    padding: 20px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+}
+
+.statHeader {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+}
+
+.statValue {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.statUnit {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-text-light);
+}
+
+.membershipCard {
+    padding: 24px 28px;
+    background-color: var(--color-card);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.statusBadge {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--color-success);
+    background-color: rgba(16, 185, 129, 0.1);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    width: fit-content;
+    letter-spacing: 0.5px;
+}
+
+.planName {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.renewButton {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--color-primary);
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.2s ease;
+}
+
+.renewButton:hover {
+    opacity: 0.75;
+}

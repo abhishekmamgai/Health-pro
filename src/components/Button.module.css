@@ -1,0 +1,227 @@
+@keyframes ripple {
+    to {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    transition:
+        transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.2s ease,
+        filter 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.inner {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.18s ease;
+}
+
+.button:active {
+    transform: scale(0.96) !important;
+}
+
+.button:active .inner {
+    transform: scale(0.97);
+}
+
+.button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 114, 255, 0.4);
+}
+
+.button:disabled {
+    background: #D0DCEF !important;
+    color: #6680AA !important;
+    cursor: not-allowed;
+    box-shadow: none !important;
+    transform: none !important;
+    filter: none !important;
+}
+
+.button:disabled::before,
+.button:disabled::after {
+    display: none;
+}
+
+/* ── PRIMARY ── */
+.primary {
+    background: var(--gradient-brand);
+    color: #fff;
+}
+
+/* Animated shimmer layer */
+.primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        105deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.18) 50%,
+        transparent 70%
+    );
+    background-size: 200% 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.primary:hover::before {
+    opacity: 1;
+    animation: shimmer 0.6s ease forwards;
+}
+
+.primary:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow:
+        0 6px 28px rgba(0, 114, 255, 0.4),
+        0 2px 8px rgba(0, 114, 255, 0.2);
+}
+
+/* ── SECONDARY ── */
+.secondary {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.secondary:hover {
+    transform: translateY(-2px) scale(1.02);
+    filter: brightness(1.12);
+    box-shadow: 0 6px 24px rgba(0, 114, 255, 0.3);
+}
+
+/* ── OUTLINE ── */
+.outline {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.outline::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 0;
+}
+
+.outline:hover::before {
+    transform: scaleX(1);
+}
+
+.outline:hover {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 114, 255, 0.25);
+    border-color: var(--color-primary);
+}
+
+/* ── GHOST ── */
+.ghost {
+    background: transparent;
+    color: var(--color-primary);
+}
+
+.ghost::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    width: 0;
+    height: 1.5px;
+    background: var(--color-primary);
+    transform: translateX(-50%);
+    transition: width 0.25s ease;
+}
+
+.ghost:hover::after {
+    width: calc(100% - 24px);
+}
+
+.ghost:hover {
+    background-color: rgba(0, 114, 255, 0.08);
+    transform: translateY(-1px);
+}
+
+/* ── DANGER ── */
+.danger {
+    background-color: var(--color-error);
+    color: #fff;
+}
+
+.danger::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        105deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.15) 50%,
+        transparent 70%
+    );
+    background-size: 200% 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.danger:hover::before {
+    opacity: 1;
+    animation: shimmer 0.6s ease forwards;
+}
+
+.danger:hover {
+    transform: translateY(-2px) scale(1.02);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 24px rgba(255, 77, 106, 0.35);
+}
+
+/* ── SIZES ── */
+.sm {
+    height: 32px;
+    padding: 0 14px;
+    font-size: 13px;
+    border-radius: calc(var(--radius-md) - 2px);
+}
+
+.md {
+    height: 44px;
+    padding: 0 22px;
+    font-size: 15px;
+}
+
+.lg {
+    height: 52px;
+    padding: 0 30px;
+    font-size: 17px;
+    letter-spacing: 0.01em;
+}
+
+.fullWidth {
+    width: 100%;
+}

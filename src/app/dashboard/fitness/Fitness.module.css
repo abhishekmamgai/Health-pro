@@ -1,0 +1,371 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.titleBox h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.gradientText {
+    background: var(--gradient-brand);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: var(--color-text-mid);
+}
+
+.qrBtn {
+    gap: 12px;
+    height: 56px !important;
+    font-weight: 700 !important;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+}
+
+.qrSection {
+    animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.qrCard {
+    max-width: 400px;
+    background: var(--color-dark);
+    color: white;
+    padding: 32px;
+    border-radius: var(--radius-xl);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.qrHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.qrPlaceholder {
+    background: white;
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.qrCodeIcon {
+    color: var(--color-dark);
+}
+
+.qrExp {
+    color: var(--color-text-light);
+    font-size: 13px;
+}
+
+.qrFooter {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.searchBar {
+    display: flex;
+    gap: 16px;
+}
+
+.searchInputWrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 16px;
+    color: var(--color-text-light);
+}
+
+.searchInput {
+    width: 100%;
+    height: 52px;
+    padding: 0 16px 0 52px;
+    background-color: var(--color-card);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    font-size: 16px;
+    color: var(--color-text);
+}
+
+.bookingGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 1024px) {
+    .bookingGrid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.sectionTitle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.sectionTitle h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.dateTag {
+    font-size: 12px;
+    padding: 4px 12px;
+    background-color: var(--color-border);
+    border-radius: var(--radius-full);
+    color: var(--color-text-mid);
+    font-weight: 700;
+    margin-left: auto;
+}
+
+.classList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.classCard {
+    background-color: var(--color-card);
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all var(--anim-base);
+}
+
+@media (min-width: 640px) {
+    .classCard {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.classCard:hover {
+    border-color: var(--color-primary);
+    transform: translateX(4px);
+}
+
+.classTime {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+}
+
+.classTime strong {
+    font-size: 18px;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+}
+
+.classTime span {
+    font-size: 13px;
+    color: var(--color-text-mid);
+}
+
+.classInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.classHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.className {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.typeBadge {
+    font-size: 10px;
+    font-weight: 800;
+    background-color: var(--color-surface-2);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: var(--color-text-mid);
+}
+
+.classMeta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--color-text-light);
+}
+
+.intensityLabel {
+    font-weight: 700;
+}
+
+.classAction {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.spotsLeft {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-text-mid);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bookBtn {
+    min-width: 120px !important;
+}
+
+.bookedStatus {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-success);
+    font-weight: 700;
+}
+
+.sideCol {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.partnerGyms {
+    background-color: var(--color-card);
+    padding: 32px;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sideTitle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sideTitle h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.gymCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-surface);
+    cursor: pointer;
+}
+
+.gymCard:last-child {
+    border-bottom: none;
+}
+
+.gymInfo strong {
+    font-size: 15px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.gymInfo p {
+    font-size: 13px;
+    color: var(--color-text-mid);
+    margin-bottom: 8px;
+}
+
+.gymMeta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.gymLink {
+    color: var(--color-text-light);
+}
+
+.statsCard {
+    background: var(--gradient-brand);
+    padding: 32px;
+    border-radius: var(--radius-xl);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.statLine {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.statLine strong {
+    margin-left: auto;
+    font-size: 18px;
+    font-weight: 800;
+}

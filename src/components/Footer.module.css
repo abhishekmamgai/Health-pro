@@ -1,0 +1,128 @@
+.footer {
+    padding: 120px 32px 60px;
+    background-color: var(--color-dark);
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    margin-bottom: 80px;
+}
+
+@media (min-width: 1024px) {
+    .top {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.brandCol {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.tagline {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text-light);
+    max-width: 400px;
+}
+
+.socials {
+    display: flex;
+    gap: 16px;
+}
+
+.socialLink {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.socialLink:hover {
+    background: var(--gradient-brand);
+    border-color: transparent;
+    transform: translateY(-4px);
+}
+
+.linksCol {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.colTitle {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-cyan);
+}
+
+.linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.link {
+    font-size: 15px;
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: white;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.footerLine {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.bottomContent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+    .bottomContent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

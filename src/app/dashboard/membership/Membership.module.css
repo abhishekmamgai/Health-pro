@@ -1,0 +1,424 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    animation: fadeUp 0.4s ease forwards;
+}
+
+/* ── Header ── */
+.header {
+    margin-bottom: 4px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--color-text);
+}
+
+/* Both words are plain white — no gradient */
+.titleWhite {
+    color: var(--color-text);
+}
+
+/* Keep this class in case it's used elsewhere, but override to white */
+.gradientText {
+    color: var(--color-text);
+    background: none;
+    -webkit-text-fill-color: unset;
+}
+
+.subtitle {
+    color: var(--color-text-mid);
+    font-size: 15px;
+}
+
+/* ── Grid ── */
+.mainGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 1024px) {
+    .mainGrid {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+/* ── Plan Card ── */
+.currentPlan {
+    padding: 48px;
+    border-radius: var(--radius-xl);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Dark (paid) base */
+.elitePlan,
+.proPlan {
+    background: var(--color-dark);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.4);
+}
+
+.elitePlan:hover,
+.proPlan:hover {
+    box-shadow: 0 32px 72px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Decorative glow orbs */
+.glowOrb1 {
+    position: absolute;
+    top: -60px;
+    right: -40px;
+    width: 280px;
+    height: 280px;
+    background: var(--gradient-brand);
+    filter: blur(90px);
+    opacity: 0.12;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.glowOrb2 {
+    position: absolute;
+    bottom: -80px;
+    left: -60px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, var(--color-cyan), transparent);
+    filter: blur(70px);
+    opacity: 0.07;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Free plan overrides */
+.freePlan {
+    background: var(--color-card);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+}
+
+.freePlan .planName,
+.freePlan .detailItem,
+.freePlan .detailItem strong {
+    color: var(--color-text) !important;
+}
+
+.freePlan .badge {
+    background-color: var(--color-surface-2);
+    color: var(--color-text-mid);
+}
+
+.freePlan .glowOrb1,
+.freePlan .glowOrb2 {
+    display: none;
+}
+
+/* ── Plan Header ── */
+.planHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 36px;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--color-cyan);
+    background-color: rgba(0, 255, 209, 0.1);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    margin-bottom: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.planName {
+    font-size: 32px;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.1;
+    color: white;
+}
+
+.planIcon {
+    color: var(--color-primary);
+    opacity: 0.9;
+}
+
+/* ── Plan Details ── */
+.planDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 44px;
+}
+
+.detailItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.detailItem strong {
+    color: white;
+    font-weight: 600;
+}
+
+.planMessage {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--color-text-mid);
+    max-width: 380px;
+}
+
+/* ── Plan Actions ── */
+.planActions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.actionBtn {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+}
+
+.actionBtn:hover {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.cancelBtn {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 14px;
+}
+
+.cancelBtn:hover {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ── Benefits Card ── */
+.benefitsCard {
+    background: var(--color-card);
+    padding: 36px 40px;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.benefitsTitle {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--color-text);
+}
+
+.benefitList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+}
+
+.benefitItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--color-text-mid);
+    font-weight: 500;
+}
+
+.check {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 50%;
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--color-success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Tier Progress Bar ── */
+.tierBar {
+    display: flex;
+    gap: 6px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border);
+}
+
+.tierStep {
+    flex: 1;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 6px 4px;
+    border-radius: 6px;
+    color: var(--color-text-mid);
+    background: var(--color-surface-2);
+    transition: all 0.3s ease;
+}
+
+.tierActive {
+    background: rgba(0, 255, 209, 0.1);
+    color: var(--color-cyan);
+}
+
+/* ── Elite Upgrade Banner ── */
+.upgradeSection {
+    background: var(--color-card);
+    padding: 28px 36px;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.upgradeGlow {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, var(--color-cyan), transparent);
+    filter: blur(60px);
+    opacity: 0.06;
+    pointer-events: none;
+}
+
+.upgradeContent {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.upgradeIconWrap {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 14px;
+    background: rgba(0, 255, 209, 0.1);
+    color: var(--color-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upgradeContent h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--color-text);
+}
+
+.upgradeContent p {
+    font-size: 13px;
+    color: var(--color-text-mid);
+    line-height: 1.5;
+}
+
+.eliteBtn {
+    white-space: nowrap;
+}
+
+/* ── Toast ── */
+.toast {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 200;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.25);
+    animation: slideInRight 0.3s ease forwards;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.toastSuccess { background: #10B981; }
+.toastError   { background: #EF4444; }
+
+/* ── Modal ── */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    z-index: 150;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background: var(--color-card);
+    padding: 36px;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.35);
+    animation: fadeUp 0.25s ease forwards;
+}
+
+.modalTitle {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.modalText {
+    color: var(--color-text-mid);
+    margin-bottom: 28px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.modalActions {
+    display: flex;
+    gap: 12px;
+}
+
+.modalActions > * {
+    flex: 1;
+}
+
+.cancelConfirmBtn {
+    background: var(--color-error) !important;
+    border-color: var(--color-error) !important;
+}
+
+/* ── Utility ── */
+.spin {
+    animation: spin 1s linear infinite;
+}
