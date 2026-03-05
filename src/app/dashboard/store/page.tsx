@@ -208,7 +208,7 @@ export default function WellnessStorePage() {
     const discount = Math.round(((PRODUCTS.find(p => p.id === selectedProduct?.id)?.mrp || 0) - (selectedProduct?.price || 0)) / (PRODUCTS.find(p => p.id === selectedProduct?.id)?.mrp || 1) * 100);
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} style={{overflow:"hidden",maxWidth:"100%",width:"100%",boxSizing:"border-box"}}>
 
             {/* ── Header ── */}
             <header className={styles.header}>
@@ -230,7 +230,7 @@ export default function WellnessStorePage() {
             </header>
 
             {/* ── Promo Banner ── */}
-            <div className={styles.banner}>
+            <div className={styles.banner} style={{width:"100%",boxSizing:"border-box",overflow:"hidden"}}>
                 <div className={styles.bannerContent}>
                     <p className={styles.bannerEyebrow}><Tag size={13} /> MEMBER EXCLUSIVE OFFER</p>
                     <h2 className={styles.bannerTitle}>Flat 15% OFF<br /><span>on all supplements</span></h2>
@@ -286,13 +286,13 @@ export default function WellnessStorePage() {
             </div>
 
             {/* ── Product Grid ── */}
-            <div className={styles.grid}>
+            <div className={styles.grid} style={{display:"grid",gridTemplateColumns:"repeat(2,minmax(0,1fr))",gap:"10px",width:"100%",boxSizing:"border-box"}}>
                 {visibleProducts.map(prod => {
                     const inCart = cart.find(c => c.id === prod.id);
                     const discPct = Math.round((prod.mrp - prod.price) / prod.mrp * 100);
                     const isWished = wishlist.includes(prod.id);
                     return (
-                        <div key={prod.id} className={styles.card}>
+                        <div key={prod.id} className={styles.card} style={{overflow:"hidden",width:"100%",boxSizing:"border-box",minWidth:0}}>
                             <div className={styles.imgWrap} onClick={() => setSelectedProduct(prod)}>
                                 <img src={prod.image} alt={prod.name} className={styles.img} loading="lazy" />
                                 <div className={styles.discPill}>-{discPct}%</div>
@@ -306,7 +306,7 @@ export default function WellnessStorePage() {
                                 </button>
                             </div>
 
-                            <div className={styles.cardBody}>
+                            <div className={styles.cardBody} style={{overflow:"hidden",minWidth:0,width:"100%",boxSizing:"border-box"}}>
                                 <span className={styles.cardCat}>{prod.category}</span>
                                 <h3 className={styles.cardName}>{prod.name}</h3>
                                 <p className={styles.cardDesc}>{prod.desc}</p>

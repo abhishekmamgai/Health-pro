@@ -107,6 +107,8 @@
     overflow: hidden;
     position: relative;
     color: white;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .banner::before {
